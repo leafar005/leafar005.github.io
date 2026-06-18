@@ -1,73 +1,94 @@
-<!DOCTYPE html>                                                                                                                                                   
-    <html lang="es">                                                                                                                                                  
-    <head>                                                                                                                                                            
-        <meta charset="UTF-8">                                                                                                                                        
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">                                                                                        
-        <title>Proyectos de leafar005</title>                                                                                                                         
-        <style>                                                                                                                                                       
-            body {                                                                                                                                                    
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;                                                                                         
-                background-color: #f4f4f9;                                                                                                                            
-                color: #333;                                                                                                                                          
-                margin: 0;                                                                                                                                            
-                padding: 40px;                                                                                                                                        
-                display: flex;                                                                                                                                        
-                flex-direction: column;                                                                                                                               
-                align-items: center;                                                                                                                                  
-            }                                                                                                                                                         
-            h1 {                                                                                                                                                      
-                color: #2c3e50;                                                                                                                                       
-            }                                                                                                                                                         
-            ul {                                                                                                                                                      
-                list-style-type: none;                                                                                                                                
-                max-width: 600px;                                                                                                                                     
-                padding: 0;                                                                                                                                           
-                width: 100%;                                                                                                                                          
-            }                                                                                                                                                         
-            li {                                                                                                                                                      
-                background: #fff;                                                                                                                                     
-                margin-bottom: 15px;                                                                                                                                  
-                padding: 20px;                                                                                                                                        
-                border-radius: 8px;                                                                                                                                   
-                box-shadow: 0 4px 6px rgba(0,0,0,0.1);                                                                                                                
-                transition: transform 0.2s, box-shadow 0.2s;                                                                                                          
-            }                                                                                                                                                         
-            li:hover {                                                                                                                                                
-                transform: translateY(-3px);                                                                                                                          
-                box-shadow: 0 6px 12px rgba(0,0,0,0.15);                                                                                                              
-            }                                                                                                                                                         
-            a {                                                                                                                                                       
-                text-decoration: none;                                                                                                                                
-                color: #3498db;                                                                                                                                       
-                font-size: 1.3em;                                                                                                                                     
-                font-weight: bold;                                                                                                                                    
-                display: block;                                                                                                                                       
-                margin-bottom: 5px;                                                                                                                                   
-            }                                                                                                                                                         
-            a:hover {                                                                                                                                                 
-                color: #2980b9;                                                                                                                                       
-            }                                                                                                                                                         
-            p {                                                                                                                                                       
-                margin: 0;                                                                                                                                            
-                color: #666;                                                                                                                                          
-                line-height: 1.5;
-            }
-        </style>
-    </head>
-    <body>
-        <h1>Portfolio de leafar005</h1>
-        <ul>
-            <li>
-                <a href="https://https://leafar005.github.io/game_recommender/">Game Recommender</a>
-                <p>Aplicación de preguntas sobre ACL.</p>
-            </li>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTFOLIO | OS_SIGNALIS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="crt-overlay"></div>
+    <div class="screen-container">
+        
+        <!-- Header / Top Bar -->
+        <header class="top-bar">
+            <div class="logo-left">
+                SYSTEM_VERSION 5.6.1<br>
+                MEMORY_ALLOC_OK
+            </div>
+            <div class="tabs">
+                <div class="tab">RECEIVER</div>
+                <div class="tab active">INVENTORY</div>
+                <div class="tab">DIAGNOSTICS</div>
+            </div>
+            <div class="logo-right">
+                <div class="lstr"><span>⛨</span> L S T R</div>
+                <div>REPLIKA_ID: LEAFAR</div>
+            </div>
+        </header>
 
-            <li>
-                <a href="https://leafar005.github.io/Quiz-ACL/">Quiz ACL</a>
-                <p>Aplicación de preguntas sobre ACL.</p>
-            </li>
-            </li>
-            -->
-        </ul>
-    </body>
-    </html>
+        <!-- Inventory Row -->
+        <div class="inventory-row">
+            <div class="nav-arrow">◀</div>
+            <div class="slot-container" id="slot-container">
+                <!-- Slots will be generated by JS -->
+            </div>
+            <div class="nav-arrow">▶</div>
+        </div>
+
+        <!-- Main Layout -->
+        <main class="main-grid">
+            
+            <!-- Left Panel: Status -->
+            <section class="panel panel-left">
+                <div class="status-header">STATUS</div>
+                <div class="profile-pic">
+                    <div class="profile-placeholder"></div>
+                    <div class="health">+99</div>
+                </div>
+                <div class="cross-box">
+                    <div class="big-x">X</div>
+                </div>
+                <div class="slider-box">
+                    <div class="slider-bg"></div>
+                    <div class="slider-handle"></div>
+                </div>
+            </section>
+
+            <!-- Center Panel: Viewer -->
+            <section class="panel panel-center">
+                <div class="viewer-content">
+                    <div class="crosshairs">
+                        <span class="crosshair ch-tl">+</span>
+                        <span class="crosshair ch-tr">+</span>
+                        <span class="crosshair ch-bl">+</span>
+                        <span class="crosshair ch-br">+</span>
+                    </div>
+                    <div id="viewer-icon" class="big-icon-display">?</div>
+                </div>
+            </section>
+
+            <!-- Right Panel: Description -->
+            <section class="panel panel-right">
+                <h2 id="desc-title" class="desc-title">NO DATA</h2>
+                <div id="desc-text" class="desc-text">Select a module to view its specifications and memory footprint.</div>
+                <a id="desc-link" href="#" class="action-btn" style="display: none;">ACCESS MODULE</a>
+            </section>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="bottom-bar">
+            <div>SIGNALIS_OS v1.0.2 // LEAFAR_PORTFOLIO</div>
+            <div class="bottom-controls">
+                <div class="control-item"><span class="icon">✜</span> MAP</div>
+                <div class="control-item"><span class="icon">⎵</span> DIAGNOSTICS</div>
+                <div class="control-item"><span class="icon">◎</span> ACTION MENU</div>
+                <div class="control-item"><span class="icon">⟷</span> SELECT ITEM</div>
+            </div>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
