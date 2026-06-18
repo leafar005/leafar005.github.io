@@ -122,7 +122,8 @@ body {
 }
 .logo-left { left: 0; }
 .logo-right { right: 0; display: flex; flex-direction: column; align-items: flex-end;}
-.logo-right .lstr { color: var(--cyan); font-weight: bold; font-size: 1.2rem; margin-top: 2px;}
+.logo-right .lstr { color: var(--cyan); font-weight: bold; font-size: 1.2rem; margin-top: 2px; text-decoration: none; display: block; transition: all 0.2s; cursor: crosshair; }
+.logo-right .lstr:hover { color: var(--text-light); text-shadow: 0 0 10px rgba(0, 213, 255, 0.8); }
 .logo-right .lstr span { color: var(--primary-orange); }
 
 /* Inventory Row */

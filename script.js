@@ -10,16 +10,16 @@ document.addEventListener('DOMContentLoaded', () => {
     // The UI will automatically generate the slots.
     const projects = [
         {
-            title: "QUIZ ACL",
-            icon: "QZ",
-            desc: "DISPOSABLE KNOWLEDGE TESTER\n\nA single-use, short-range knowledge testing application.\n\nFocuses on Access Control Lists.\n\nSTATUS: ONLINE",
-            url: "https://leafar005.github.io/Quiz-ACL/"
-        },
-        {
             title: "GAME RECOMMENDER",
             icon: "GR",
             desc: "ENTERTAINMENT SELECTION MATRIX\n\nAlgorithmic analysis of user preferences to suggest optimal simulation experiences.\n\nSTATUS: SLOW SERVER (80-100 seconds wait needed for the first request",
             url: "https://leafar005.github.io/game_recommender/"                                                                                                  
+        },
+        {
+            title: "QUIZ ACL",
+            icon: "QZ",
+            desc: "DISPOSABLE KNOWLEDGE TESTER\n\nA single-use, short-range knowledge testing application.\n\nFocuses on Quality Assurance.\n\nSTATUS: ONLINE",
+            url: "https://leafar005.github.io/Quiz-ACL/"
         },
         {
             title: "PROJECT_03",
