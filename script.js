@@ -16,10 +16,10 @@ document.addEventListener('DOMContentLoaded', () => {
             url: "https://leafar005.github.io/Quiz-ACL/"
         },
         {
-            title: "PROJECT_02",
-            icon: "P2",
-            desc: "UNDEFINED MODULE\n\nMemory sector unallocated. Awaiting data insertion.\n\nSTATUS: OFFLINE",
-            url: "#"
+            title: "GAME RECOMMENDER",
+            icon: "GR",
+            desc: "ENTERTAINMENT SELECTION MATRIX\n\nAlgorithmic analysis of user preferences to suggest optimal simulation experiences.\n\nSTATUS: SLOW SERVER (80-100 seconds wait needed for the first request",
+            url: "https://leafar005.github.io/game_recommender/"                                                                                                  
         },
         {
             title: "PROJECT_03",
