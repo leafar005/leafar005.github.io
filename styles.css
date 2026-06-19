@@ -243,6 +243,9 @@
             max-width: 250px; max-height: 250px; object-fit: contain; animation: hologramSpin 12s linear infinite;
             opacity: 0.95; mix-blend-mode: screen; 
         }
+        model-viewer::part(default-progress-bar) {
+            display: none;
+        }
         @keyframes hologramSpin { 0% { transform: rotateY(0deg); } 100% { transform: rotateY(360deg); } }
         @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-10px); } }
         
@@ -262,6 +265,8 @@
 
         .greeble-coord { position: absolute; bottom: 10px; right: 15px; font-size: 0.7rem; color: var(--text-dim); opacity: 0.6; }
         .greeble-blink { position: absolute; top: 15px; right: 15px; width: 8px; height: 8px; background: var(--primary-orange); box-shadow: var(--glow-orange); animation: blink 2s infinite; }
+
+        .mobile-interact-prompt { display: none; }
 
         /* ── PANEL DERECHO (DIAGNOSTIC) ── */
         .desc-title {
@@ -356,6 +361,35 @@
             .viewer-img { max-width: 180px; max-height: 180px; }
             .tech-info, .greeble-blink, .greeble-coord { display: none; }
 
+            .mobile-interact-prompt {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                bottom: 25px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: rgba(0, 0, 0, 0.85);
+                border: var(--border-thick);
+                color: var(--primary-orange);
+                padding: 6px 16px;
+                font-size: 1rem;
+                font-weight: bold;
+                letter-spacing: 2px;
+                box-shadow: 0 0 10px rgba(255, 51, 0, 0.4);
+                pointer-events: none; /* Allows tapping through to the viewer */
+                z-index: 50;
+                white-space: nowrap;
+                /* Slight flicker on the whole box to fit the CRT vibe */
+                animation: promptBoxFlicker 4s infinite;
+            }
+            .mobile-interact-prompt .interact-btn {
+                color: var(--text-light);
+                margin-right: 8px;
+                /* Sharp, retro terminal blink for the prompt */
+                animation: blink 1.2s infinite;
+            }
+
             .bottom-bar { flex-direction: column; align-items: center; gap: 10px; text-align: center; }
             .bottom-controls { flex-wrap: wrap; justify-content: center; }
 
@@ -374,4 +408,10 @@
         .boot-text {
             font-size: var(--font-md); text-align: left; width: 80%; max-width: 600px;
             white-space: pre-wrap; line-height: 1.5; margin-bottom: 20px;
+        }
+
+        @keyframes promptBoxFlicker {
+            0%, 96%, 98%, 100% { opacity: 1; border-color: var(--primary-orange); }
+            97% { opacity: 0.6; border-color: rgba(255, 51, 0, 0.4); }
+            99% { opacity: 0.9; box-shadow: none; }
         }
