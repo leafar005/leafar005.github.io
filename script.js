@@ -1,13 +1,11 @@
 /**
- * ── OS_SIGNALIS PORTFOLIO CONFIGURATION ──
+ * ── CONFIGURACION ──
  * 
- * Aquí puedes añadir, eliminar o modificar los proyectos que aparecen en el inventario.
- * Asegúrate de mantener la estructura de comillas y comas.
  * 
  * - title:   El título del proyecto.
  * - icon:    Abreviatura de 2 letras que aparecerá en el recuadro si no hay imagen ni modelo 3D.
- * - image:   Ruta de la imagen plana (ej: "resources/foto.jpg"). Deja vacío "" si no tienes.
- * - model:   Ruta del archivo 3D (.glb). Tiene prioridad sobre la imagen plana. Deja vacío "" si no tienes.
+ * - image:   Ruta de la imagen plana.
+ * - model:   Ruta del archivo 3D (.glb).
  * - desc:    Texto del reporte de diagnóstico (soporta saltos de línea con \n).
  * - demoUrl: Enlace a la web o demo interactiva (aparece el botón INSPECT).
  * - codeUrl: Enlace al repositorio de código fuente (aparece el botón USE / CODE).
@@ -34,15 +32,15 @@ const projects = [
         demoUrl: "https://leafar005.github.io/Quiz-ACL/",
         codeUrl: "https://github.com/leafar005/Quiz-ACL"
     },
-    {
-        id: 'p3',
-        title: "SIGNALIS HUD",
-        icon: "SH",
+        {
+        id: 'p4',
+        title: "PROJECT_04",
+        icon: "P4",
         image: "",
         model: "",
-        desc: "MODULE: RETRO UI FRAMEWORK\n\n[DIAGNOSTIC LOG]\nReproduction of the standard REPLIKA visual interface. Employs HTML/CSS/JS without external dependencies. Fully responsive.\n\nSTATUS: ACTIVE",
-        demoUrl: "https://github.com/leafar005",
-        codeUrl: "https://github.com/leafar005"
+        desc: "MODULE: UNDEFINED\n\n[DIAGNOSTIC LOG]\nMemory sector unallocated. Awaiting data insertion.\n\nSTATUS: OFFLINE",
+        demoUrl: "",
+        codeUrl: ""
     },
     {
         id: 'p4',
@@ -58,7 +56,6 @@ const projects = [
 
 const TOTAL_SLOTS = 5; // Número total de recuadros en el inventario. Se rellenarán con "EMPTY".
 
-// ── CORE SYSTEM LOGIC (No modificar a menos que sepas lo que haces) ──
 
 document.addEventListener('DOMContentLoaded', () => {
     // ── BOOT SEQUENCE LOGIC ──
