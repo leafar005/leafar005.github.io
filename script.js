@@ -127,21 +127,18 @@ document.addEventListener('DOMContentLoaded', () => {
         
         if (project) {
             slot.className = 'slot item-slot';
-            // El título del proyecto es un enlace que va directo a su URL
-            const targetUrl = project.demoUrl && project.demoUrl !== '#' ? project.demoUrl : (project.codeUrl || '#');
-            
+            // El título del proyecto no es un enlace externo, toda el área selecciona el proyecto
             slot.innerHTML = `
-                <a href="${targetUrl}" target="_blank" class="slot-title">${project.title}</a>
+                <div class="slot-title">${project.title}</div>
                 <div class="slot-content">
                     <div class="slot-icon">${project.icon}</div>
                 </div>
                 <div class="slot-count">01</div>
             `;
             
-            // Al tocar el cuerpo del slot (icono), se selecciona el proyecto para verlo en el centro
-            const slotContent = slot.querySelector('.slot-content');
-            slotContent.addEventListener('mouseenter', () => activateSlot(slot, project));
-            slotContent.addEventListener('click', () => activateSlot(slot, project));
+            // Al tocar el slot completo (título o icono), se selecciona el proyecto para verlo en el centro
+            slot.addEventListener('mouseenter', () => activateSlot(slot, project));
+            slot.addEventListener('click', () => activateSlot(slot, project));
         } else {
             slot.className = 'slot empty';
             slot.innerHTML = `

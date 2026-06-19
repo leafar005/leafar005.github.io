@@ -173,7 +173,7 @@
         }
 
         .panel { display: flex; flex-direction: column; position: relative; padding: 15px; min-height: 0; }
-        .panel-left { border-right: var(--border-thick); overflow-y: auto; scrollbar-width: thin; scrollbar-color: var(--primary-orange) transparent; }
+        .panel-left { border-right: var(--border-thick); overflow: hidden; }
         .panel-center { display: flex; align-items: center; justify-content: center; }
         .panel-right { border-left: var(--border-thick); }
 
@@ -223,6 +223,11 @@
         @keyframes jitter1 { 0%, 100% { height: 20%; background: var(--text-dim); box-shadow: none; } 15% { height: 80%; background: var(--text-light); box-shadow: 0 0 8px rgba(255,255,255,0.8); } 30% { height: 40%; background: var(--text-dim); box-shadow: none; } 45% { height: 95%; background: var(--primary-orange); box-shadow: 0 0 8px var(--primary-orange); } 60% { height: 10%; background: var(--text-dim); box-shadow: none; } 80% { height: 60%; background: var(--text-light); box-shadow: 0 0 5px rgba(255,255,255,0.5); } }
         @keyframes jitter2 { 0%, 100% { height: 40%; background: var(--text-dim); box-shadow: none; } 10% { height: 15%; background: var(--text-dim); box-shadow: none; } 25% { height: 100%; background: var(--primary-orange); box-shadow: 0 0 8px var(--primary-orange); } 40% { height: 35%; background: var(--text-dim); box-shadow: none; } 65% { height: 85%; background: var(--text-light); box-shadow: 0 0 8px rgba(255,255,255,0.8); } 85% { height: 25%; background: var(--text-dim); box-shadow: none; } }
         @keyframes jitter3 { 0%, 100% { height: 15%; background: var(--text-dim); box-shadow: none; } 20% { height: 90%; background: var(--text-light); box-shadow: 0 0 8px rgba(255,255,255,0.8); } 35% { height: 50%; background: var(--text-dim); box-shadow: none; } 55% { height: 75%; background: var(--primary-orange); box-shadow: 0 0 8px var(--primary-orange); } 75% { height: 30%; background: var(--text-dim); box-shadow: none; } 90% { height: 100%; background: var(--text-light); box-shadow: 0 0 8px rgba(255,255,255,0.8); } }
+
+        /* Ocultar radio cuando no hay espacio vertical en PC para evitar el scrollbar */
+        @media (max-height: 600px) and (min-width: 769px) {
+            .radio-module { display: none; }
+        }
 
         /* ── PANEL CENTRAL (VIEWER) ── */
         .crosshairs { position: absolute; top: 0; left: 0; right: 0; bottom: 0; pointer-events: none; }
@@ -335,6 +340,8 @@
             }
             .status-header { display: none; }
             .profile-pic { width: 90px; margin-bottom: 0; flex-shrink: 0; align-self: center; }
+            .health { font-size: 0.45rem; padding: 2px 3px; gap: 3px; bottom: 3px; left: 3px; }
+            .health::before { font-size: 0.35rem; }
             
             .radio-module { display: flex; flex: 1; min-width: 0; margin-top: 0; padding: 4px; }
             .radio-freq-large { font-size: 1.8rem; }
