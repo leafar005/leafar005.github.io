@@ -1,6 +1,6 @@
 # Portfolio
 
-Portfolio personal de leafar005 (yo), alojado en GitHub Pages, que sale mas barato
+Portfolio personal de leafar005 (yo), alojado en GitHub Pages, que sale mas barato.
 
 ## Sobre el proyecto
 
