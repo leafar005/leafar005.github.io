@@ -63,8 +63,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const bootText = document.getElementById('boot-text');
     
     if (bootScreen && bootText) {
+        const now = new Date();
+        const pad = (n) => n.toString().padStart(2, '0');
+        const dateStr = `${pad(now.getMonth() + 1)}/${pad(now.getDate())}/${now.getFullYear()} ${pad(now.getHours())}:${pad(now.getMinutes())}:${pad(now.getSeconds())}`;
+
         const bootLines = [
-            "BIOS DATE 08/21/2084 14:22:15 VER 1.05",
+            `BIOS DATE ${dateStr} VER 1.05`,
             "CPU: AEON PROCESSOR 800 MHz",
             "Memory Test:  4096K OK",
             "",
@@ -83,9 +87,8 @@ document.addEventListener('DOMContentLoaded', () => {
             if (lineIdx < bootLines.length) {
                 bootText.textContent += bootLines[lineIdx] + "\n";
                 lineIdx++;
-                setTimeout(typeBootLine, Math.random() * 100 + 50); // Velocidad variable retro
+                setTimeout(typeBootLine, Math.random() * 100 + 50); // Velocidad variable
             } else {
-                // Finalizó, esperar 1 segundo y quitar la pantalla automáticamente
                 setTimeout(endBoot, 1000);
             }
         }
@@ -238,6 +241,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     // Auto-seleccionar primer elemento
-    const firstItem = document.querySelector('.item-slot .slot-content');
-    if (firstItem) firstItem.dispatchEvent(new Event('mouseenter'));
+    const firstSlot = document.querySelector('.item-slot');
+    if (firstSlot && projects.length > 0) {
+        activateSlot(firstSlot, projects[0]);
+    }
 });
