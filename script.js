@@ -33,9 +33,9 @@ const projects = [
         codeUrl: "https://github.com/leafar005/Quiz-ACL"
     },
         {
-        id: 'p4',
-        title: "PROJECT_04",
-        icon: "P4",
+        id: 'p3',
+        title: "PROJECT_03",
+        icon: "P3",
         image: "",
         model: "",
         desc: "MODULE: UNDEFINED\n\n[DIAGNOSTIC LOG]\nMemory sector unallocated. Awaiting data insertion.\n\nSTATUS: OFFLINE",
