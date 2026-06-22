@@ -25,22 +25,22 @@ const projects = [
     {
         id: 'p2',
         title: "QUIZ ACL",
-        icon: "QZ",
+        icon: "ACL",
         image: "",
         model: "resources/graph.glb",
         desc: "MODULE: DISPOSABLE KNOWLEDGE TESTER\n\n[DIAGNOSTIC LOG]\nA single-use, short-range knowledge testing application. Focuses on Quality Assurance.\n\nSTATUS: ONLINE",
         demoUrl: "https://leafar005.github.io/Quiz-ACL/",
         codeUrl: "https://github.com/leafar005/Quiz-ACL"
     },
-        {
+    {
         id: 'p3',
-        title: "PROJECT_03",
-        icon: "P3",
+        title: "QUIZ BDA",
+        icon: "BDA",
         image: "",
-        model: "",
-        desc: "MODULE: UNDEFINED\n\n[DIAGNOSTIC LOG]\nMemory sector unallocated. Awaiting data insertion.\n\nSTATUS: OFFLINE",
-        demoUrl: "",
-        codeUrl: ""
+        model: "resources/graph.glb",
+        desc: "MODULE: DISPOSABLE KNOWLEDGE TESTER\n\n[DIAGNOSTIC LOG]\nA single-use, short-range knowledge testing application. Focuses on Advanced Databases.\n\nSTATUS: ONLINE",
+        demoUrl: "https://leafar005.github.io/Quiz-BDA/",
+        codeUrl: "https://github.com/leafar005/Quiz-BDA"
     },
     {
         id: 'p4',
