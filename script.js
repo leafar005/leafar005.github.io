@@ -24,23 +24,23 @@ const projects = [
     },
     {
         id: 'p2',
-        title: "QUIZ ACL",
+        title: "Estudio ACL",
         icon: "ACL",
         image: "",
         model: "resources/graph.glb",
-        desc: "MODULE: DISPOSABLE KNOWLEDGE TESTER\n\n[DIAGNOSTIC LOG]\nA single-use, short-range knowledge testing application. Focuses on Quality Assurance.\n\nSTATUS: ONLINE",
-        demoUrl: "https://leafar005.github.io/Quiz-ACL/",
-        codeUrl: "https://github.com/leafar005/Quiz-ACL"
+        desc: "MODULE: DISPOSABLE KNOWLEDGE DATABASE\n\n[DIAGNOSTIC LOG]\nA single-use, short-range knowledge testing application. Focuses on Quality Assurance.\n\nSTATUS: ONLINE",
+        demoUrl: "https://leafar005.github.io/Estudio-ACL/",
+        codeUrl: "https://github.com/leafar005/Estudio-ACL"
     },
     {
         id: 'p3',
-        title: "QUIZ BDA",
+        title: "Estudio BDA",
         icon: "BDA",
         image: "",
         model: "resources/graph.glb",
-        desc: "MODULE: DISPOSABLE KNOWLEDGE TESTER\n\n[DIAGNOSTIC LOG]\nA single-use, short-range knowledge testing application. Focuses on Advanced Databases.\n\nSTATUS: ONLINE",
-        demoUrl: "https://leafar005.github.io/Quiz-BDA/",
-        codeUrl: "https://github.com/leafar005/Quiz-BDA"
+        desc: "MODULE: DISPOSABLE KNOWLEDGE DATABASE\n\n[DIAGNOSTIC LOG]\nA single-use, short-range knowledge testing application. Focuses on Advanced Databases.\n\nSTATUS: ONLINE",
+        demoUrl: "https://leafar005.github.io/Estudio-BDA/",
+        codeUrl: "https://github.com/leafar005/Estudio-BDA"
     },
     {
         id: 'p4',
